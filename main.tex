@@ -3,6 +3,7 @@
 % Language
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
 
 % Paging
 \usepackage[a4paper, total={6in, 8in}, margin=0.5in, showframe]{geometry}
@@ -10,6 +11,10 @@
 % Image
 \usepackage{graphicx}
 \graphicspath{ {images/} }
+\usepackage{svg}
+
+% Table
+\usepackage{array}
 
 % Metadata
 \title{CV}
@@ -19,37 +24,34 @@
 \begin{document}
 
 \begin{minipage}{0.3\textwidth}
-    \centering
-    
+
     \includegraphics[width=\textwidth]{profile}
     
     Arcadii Rubailo \\
     Age: 25 August 20, 1995
-    Moldova \\
-    Videnska 22, Brno \\
-    +420 775 087 503 \\
-    rubailo.arcadii@gmail.com \\
-    /elderanakain \\
-    /arcadii-rubailo \\
-    /elderanakain
     
-    \renewcommand{\arraystretch}{1.5}
-    \begin{center}
-        \begin{tabular}{ l l }
-            Russian & Native \\ \hline
-            English & C1 \\ \hline
-            Romanian & B1 \\ \hline
-            Czech & A1 \\ \hline
-        \end{tabular}
-    \end{center}
+    \hfill
     
-    Skills
-    Programming languages:
-    Kotlin, Java.
-    Development tools:
-    Android Studio, IntelliJ IDEA,
-    Zeplin, Jira, Figma.
-
+    \begin{tabular}{ m{0.1\textwidth} m{0.7\textwidth}  }
+        \includesvg[height=20pt]{icon_flag}     &   \includesvg[height=12pt]{icon_flag_md} Moldova \\
+        \includesvg[height=20pt]{icon_home}     &   \includesvg[height=12pt]{icon_flag_cz} Videnska 22, Brno \\
+        \includesvg[height=20pt]{icon_phone}    &   +420 775 087 503 \\
+        \includesvg[height=20pt]{icon_email}    &   rubailo.arcadii@gmail.com \\
+        \includesvg[height=20pt]{icon_linkedin} &   /arcadii-rubailo \\
+        \includesvg[height=20pt]{icon_github}   &   /elderanakain \\
+        \includesvg[height=20pt]{icon_language} &   \begin{tabular}{ l l }
+                                                        Russian & Native \\ \hline
+                                                        English & C1 \\ \hline
+                                                        Romanian & B1 \\ \hline
+                                                        Czech & A1 \\ \hline
+                                                    \end{tabular} \\
+        \includesvg[height=20pt]{icon_list}     &   \textbf{\large{Skills}} \\
+                                                &   Programming languages: \\
+                                                &   Kotlin, Java. \\
+                                                &   Development tools: \\
+                                                &   Android Studio, IntelliJ IDEA, Zeplin, Jira, Figma. \\
+    \end{tabular} \\
+    
 \end{minipage}
 \hfill
 \begin{minipage}{0.6\textwidth}
