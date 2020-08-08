@@ -6,7 +6,7 @@
 \usepackage{newunicodechar}
 
 % Paging
-\usepackage[a4paper, total={6in, 8in}, margin=0.5in, showframe]{geometry}
+\usepackage[a4paper, total={6in, 8in}, margin=1cm, showframe]{geometry}
 
 % Image
 \usepackage{graphicx}
@@ -21,20 +21,20 @@
 \title{CV}
 \author{Arcadii Rubailo}
 
+% Global settings
+\setlength{\intextsep}{0pt}
+\setlength{\tabcolsep}{5pt}
+\setlength{\parindent}{0pt}
+
 % Content
 \begin{document}
-\begin{minipage}[t]{0.3\textwidth}
-
+\begin{minipage}[t]{0.35\textwidth}
     \begin{figure}[H]
+        \vspace*{-12pt}
         \includegraphics[width=\textwidth]{profile}
     \end{figure}
-    
-    Arcadii Rubailo \\
-    Age: 25 August 20, 1995
-    
-    \hfill
-    
-    \setlength{\tabcolsep}{1pt}
+    Arcadii Rubailo \newline
+    Age: 25 August 20, 1995 \newline
     \begin{tabular}{ l l }
         \includesvg[height=20pt]{icon_flag}     &   \includesvg[height=12pt]{icon_flag_md} Moldova \\
         \includesvg[height=20pt]{icon_home}     &   \includesvg[height=12pt]{icon_flag_cz} Videnska 22, Brno \\
@@ -57,8 +57,9 @@
                                                 &   Zeplin, Jira, Figma. \\
     \end{tabular}
 \end{minipage}
+\hspace{15pt}
 \begin{minipage}[t]{0.6\textwidth}
-    Education
+    \raisebox{-.25\height}{\includesvg[height=20pt]{icon_school}} Education
     
     \bigskip
     
@@ -74,7 +75,7 @@
     
     \bigskip
     
-    Experience
+    \raisebox{-.25\height}{\includesvg[height=20pt]{icon_work}} Experience
     
     \bigskip
     
