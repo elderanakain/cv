@@ -12,6 +12,7 @@
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage{svg}
+\usepackage{float}
 
 % Table
 \usepackage{array}
@@ -22,17 +23,19 @@
 
 % Content
 \begin{document}
+\begin{minipage}[t]{0.3\textwidth}
 
-\begin{minipage}{0.3\textwidth}
-
-    \includegraphics[width=\textwidth]{profile}
+    \begin{figure}[H]
+        \includegraphics[width=\textwidth]{profile}
+    \end{figure}
     
     Arcadii Rubailo \\
     Age: 25 August 20, 1995
     
     \hfill
     
-    \begin{tabular}{ m{0.1\textwidth} m{0.7\textwidth}  }
+    \setlength{\tabcolsep}{1pt}
+    \begin{tabular}{ l l }
         \includesvg[height=20pt]{icon_flag}     &   \includesvg[height=12pt]{icon_flag_md} Moldova \\
         \includesvg[height=20pt]{icon_home}     &   \includesvg[height=12pt]{icon_flag_cz} Videnska 22, Brno \\
         \includesvg[height=20pt]{icon_phone}    &   +420 775 087 503 \\
@@ -49,48 +52,71 @@
                                                 &   Programming languages: \\
                                                 &   Kotlin, Java. \\
                                                 &   Development tools: \\
-                                                &   Android Studio, IntelliJ IDEA, Zeplin, Jira, Figma. \\
-    \end{tabular} \\
-    
+                                                &   Android Studio, \\
+                                                &   IntelliJ IDEA, \\
+                                                &   Zeplin, Jira, Figma. \\
+    \end{tabular}
 \end{minipage}
-\hfill
-\begin{minipage}{0.6\textwidth}
-    Android developer with 4 years of experience. Gained professional
-    skills working in developing online shopping, video streaming and
-    travel agency applications. Motivated to use new technologies and
-    bringing new architectural improvements.
-    
+\begin{minipage}[t]{0.6\textwidth}
     Education
-    Masaryk University – MSc 2017 – 2019
-    Faculty of Informatics
+    
+    \bigskip
+    
+    Masaryk University – MSc \hfill 2017 – 2019 \newline
+    Faculty of Informatics \newline
     Service Science, Management and Engineering programme
-    State University of Moldova – BSc 2014 – 2017
-    Mathematics and Computer Science
+    
+    \bigskip
+    
+    State University of Moldova – BSc \hfill 2014 – 2017 \newline
+    Mathematics and Computer Science \newline
     Computer science programme
+    
+    \bigskip
+    
     Experience
-    Kiwi.com 07.2018 – Present
-    Kiwi.com Android app, booking main developer.
-    Tech stack: Kotlin/Java, MVVM, Realm, ARCore (OpenGL),
-    Dagger2/Koin, Databinding\&LiveData, Moshi/Gson,
+    
+    \bigskip
+    
+    Kiwi.com \hfill 07.2018 – Present \newline
+    Kiwi.com Android app, booking main developer. \newline
+    Tech stack: Kotlin/Java, MVVM, Realm, ARCore (OpenGL), \newline
+    Dagger2/Koin, Databinding\&LiveData, Moshi/Gson, \newline
     RxJava2/Flow, Jetpack Libraries, Retrofit2+OkHttp3.
-    Ellation 01.2017 – 08.2017
-    VRV and Crunchyroll Android apps development.
-    Tech stack: Java/Kotlin, Retrofit2+OkHttp3, Chromecast, MVP,
-    Fabric, Exoplayer, Firebase, Branch.io, Outbound.io, JUnit4,
+    
+    \bigskip
+    
+    Ellation \hfill 01.2017 – 08.2017 \newline
+    VRV and Crunchyroll Android apps development. \newline
+    Tech stack: Java/Kotlin, Retrofit2+OkHttp3, Chromecast, MVP, \newline
+    Fabric, Exoplayer, Firebase, Branch.io, Outbound.io, JUnit4, \newline
     Mockito1.
-    Yopeso 08.2016 – 01.2017
-    limango Android app development.
-    Tech stack: Java, Retrofit+OkHttp3, Firebase, RxJava, MVP,
+   
+    \bigskip
+    
+    Yopeso \hfill 08.2016 – 01.2017 \newline
+    limango Android app development. \newline
+    Tech stack: Java, Retrofit+OkHttp3, Firebase, RxJava, MVP, \newline
     JUnit4+Mockito2, Dagger2, SQLite.
-    Travod International 10.2015 – 08.2016
-    Technical support, DTP and project management.
+    
+    \bigskip
+    
+    Travod International \hfill 10.2015 – 08.2016 \newline
+    Technical support, DTP and project management. \newline
     Tech stack: Photoshop, InDesign, SDL Trados.
-    Aursoft 02.2015 – 12.2015
-    MyBebe Android app development.
+    
+    \bigskip
+    
+    Aursoft \hfill 02.2015 – 12.2015 \newline
+    MyBebe Android app development. \newline
     Tech stack: Java, Support Library, Volley, Picasso, SQLite.
-    Hobbies and interests
-    Reading: science fiction, IT blogs, self-development.
-    Master of sports in archery.
-\end{minipage}
 
+    \bigskip
+    
+    Hobbies and interests
+    
+    \bigskip
+    
+    Reading: science fiction, IT blogs, self-development. Master of sports in archery.
+\end{minipage}\\
 \end{document}
