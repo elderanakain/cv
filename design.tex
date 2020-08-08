@@ -22,8 +22,14 @@
 
 % Iconography
 
-\newcommand{\icon}[1]{
-    \raisebox{-.2\height}{
-        \includesvg[height=20pt]{#1}
+\newcommand{\icon}[2][20pt]{
+    \raisebox{-.25\height}{
+        \includesvg[height=#1]{#2}
     }
+}
+
+% Table
+
+\newcommand{\rowend}{
+    \\[8pt]
 }
