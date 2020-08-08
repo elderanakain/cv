@@ -1,5 +1,7 @@
 \documentclass[12pt, a4paper]{article}
 
+\input{design}
+
 % Language
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
@@ -20,20 +22,6 @@
 % Table
 \usepackage{array}
 
-% Custom commands
-
-\newcommand{\headlineSix}[1]{{\Large #1}}
-
-\newcommand{\sectionTitle}[2]{
-    \bigskip 
-    \raisebox{-.15\height}{\includesvg[height=20pt]{#2}} 
-    \hspace{4pt} 
-    \headlineSix{\textbf{#1}} 
-    \bigskip
-}
-
-\newcommand{\subsectionTitle}[1]{\bigskip #1 \bigskip}
-
 % Metadata
 \title{CV}
 \author{Arcadii Rubailo}
@@ -53,25 +41,25 @@
     Arcadii Rubailo \newline
     Age: 25 August 20, 1995 \newline
     \begin{tabular}{ l l }
-        \includesvg[height=20pt]{icon_flag}     &   \includesvg[height=12pt]{icon_flag_md} Moldova \\
-        \includesvg[height=20pt]{icon_home}     &   \includesvg[height=12pt]{icon_flag_cz} Videnska 22, Brno \\
-        \includesvg[height=20pt]{icon_phone}    &   +420 775 087 503 \\
-        \includesvg[height=20pt]{icon_email}    &   rubailo.arcadii@gmail.com \\
-        \includesvg[height=20pt]{icon_linkedin} &   /arcadii-rubailo \\
-        \includesvg[height=20pt]{icon_github}   &   /elderanakain \\
-        \includesvg[height=20pt]{icon_language} &   \begin{tabular}{ l l }
-                                                        Russian & Native \\ \hline
-                                                        English & C1 \\ \hline
-                                                        Romanian & B1 \\ \hline
-                                                        Czech & A1 \\ \hline
-                                                    \end{tabular} \\
-        \includesvg[height=20pt]{icon_list}     &   \textbf{\large{Skills}} \\
-                                                &   Programming languages: \\
-                                                &   Kotlin, Java. \\
-                                                &   Development tools: \\
-                                                &   Android Studio, \\
-                                                &   IntelliJ IDEA, \\
-                                                &   Zeplin, Jira, Figma. \\
+        \icon{icon_flag}        &   Moldova \\
+        \icon{icon_home}        &   Videnska 22d, Brno \\
+        \icon{icon_phone}       &   +420 775 087 503 \\
+        \icon{icon_email}       &   rubailo.arcadii@gmail.com \\
+        \icon{icon_linkedin}    &   /arcadii-rubailo \\
+        \icon{icon_github}      &   /elderanakain \\
+        \icon{icon_language}    &   \begin{tabular}{ l l }
+                                        Russian & Native \\ \hline
+                                        English & C1 \\ \hline
+                                        Romanian & B1 \\ \hline
+                                        Czech & A1 \\ \hline
+                                    \end{tabular} \\
+        \icon{icon_list}        &   \textbf{\large{Skills}} \\
+                                &   Programming languages: \\
+                                &   Kotlin, Java. \\
+                                &   Development tools: \\
+                                &   Android Studio, \\
+                                &   IntelliJ IDEA, \\
+                                &   Zeplin, Jira, Figma. \\
     \end{tabular}
 \end{minipage}
 \hspace{15pt}

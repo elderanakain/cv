@@ -1,0 +1,29 @@
+% Typography
+
+\newcommand{\headlineSix}[1]{
+    {\Large #1}
+}
+
+\newcommand{\sectionTitle}[2]{
+    \bigskip 
+    \raisebox{-.15\height}{
+        \includesvg[height=20pt]{#2}
+    }
+    \hspace{4pt} 
+    \headlineSix{\textbf{#1}} 
+    \bigskip
+}
+
+\newcommand{\subsectionTitle}[1]{
+    \bigskip
+    #1 
+    \bigskip
+}
+
+% Iconography
+
+\newcommand{\icon}[1]{
+    \raisebox{-.2\height}{
+        \includesvg[height=20pt]{#1}
+    }
+}
