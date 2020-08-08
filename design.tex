@@ -1,23 +1,15 @@
-% Typography
+% Typography (https://material.io/design/typography/the-type-system.html)
 
 \newcommand{\headlineSix}[1]{
+    {\LARGE #1}
+}
+
+\newcommand{\subtitleOne}[1]{
     {\Large #1}
 }
 
-\newcommand{\sectionTitle}[2]{
-    \bigskip 
-    \raisebox{-.15\height}{
-        \includesvg[height=20pt]{#2}
-    }
-    \hspace{4pt} 
-    \headlineSix{\textbf{#1}} 
-    \bigskip
-}
-
-\newcommand{\subsectionTitle}[1]{
-    \bigskip
-    #1 
-    \bigskip
+\newcommand{\subtitleTwo}[1]{
+    {\large #1}
 }
 
 % Iconography
@@ -33,3 +25,31 @@
 \newcommand{\rowend}{
     \\[8pt]
 }
+
+% Section
+
+\newcommand{\sectionTitle}[2]{
+    \bigskip 
+    \raisebox{-.1\height}{
+        \includesvg[height=20pt]{#2}
+    }
+    \headlineSix{\textbf{#1}} 
+    \bigskip
+}
+
+\newcommand{\subsectionTitle}[2]{
+    \bigskip
+    \subtitleOne{#1} \hfill \subtitleTwo{#2} 
+    \bigskip
+}
+
+\newenvironment{sectionBody}{
+    \vspace{-20pt}
+    \begin{tabbing}
+    \hspace{5mm} \= \\
+}
+{ 
+    \end{tabbing}
+    \vspace{-20pt}
+}
+    
