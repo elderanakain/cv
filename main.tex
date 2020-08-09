@@ -11,13 +11,9 @@
 % Font
 \usepackage[sfdefault]{roboto}
 
-% Page
-\usepackage[a4paper, total={6in, 8in}, margin=1cm, showframe]{geometry}
+% Page (showframe)
+\usepackage[a4paper, total={6in, 8in}, margin=1cm]{geometry}
 \pagenumbering{gobble}
-
-% Colour
-\usepackage{xcolor}
-\definecolor{ultramarine}{rgb}{0.07, 0.04, 0.56}
 
 % Image
 \usepackage{graphicx}
@@ -30,8 +26,7 @@
 
 \usepackage{hyperref}
 \hypersetup{
-    colorlinks=true,
-    urlcolor=ultramarine
+    colorlinks=false
 }
 
 \urlstyle{same}
@@ -50,7 +45,7 @@
 \begin{document}
 \begin{minipage}[t]{0.35\textwidth}
     \begin{figure}[H]
-        \vspace*{-12pt}
+        \vspace*{-18pt}
         \includegraphics[width=\textwidth]{profile}
     \end{figure}
     
@@ -64,8 +59,8 @@
         \icon{icon_home}            &   Videnska 22d, Brno                                                      \\
                                     &   Czech Republic                                                          \rowend
         \icon{icon_flag}            &   Moldova                                                                 \rowend
-        \icon[15pt]{icon_linkedin}  &   \href{https://www.linkedin.com/in/arcadii-rubailo}{/arcadii-rubailo}    \rowend
-        \icon[18pt]{icon_github}    &   \href{https://github.com/elderanakain}{/elderanakain}                   \rowend
+        \icon[15pt]{icon_linkedin}  &   \linkedinUrl{/arcadii-rubailo}                                          \rowend
+        \icon[18pt]{icon_github}    &   \githubUrl{/elderanakain}                                               \rowend
         \icon{icon_list}            &   Programming languages:                                                  \\
                                     &   Kotlin, Java.                                                           \rowend
                                     &   Development tools:                                                      \\
@@ -81,42 +76,58 @@
 \begin{minipage}[t]{0.6\textwidth}
     \sectionTitle{Experience}{icon_work}
     
+    \vspace{24pt}
+    
     \begin{subsec}{\kiwiUrl{Kiwi.com}}{07.2018 – Present}
-        \> \kiwiAppUrl{Kiwi.com Android app}, booking main developer. \\
+        \> \kiwiAppUrl{Kiwi.com Android app}, booking main developer. \lineend
         \> Tech stack: Kotlin/Java, MVVM, Realm, ARCore, \\
         \> Dagger2/Koin, Databinding\&LiveData, Moshi/Gson, \\
         \> RxJava2/Flow, Jetpack Libraries, Retrofit2+OkHttp3. \\
     \end{subsec}
     
+    \vspace{24pt}
+    
     \begin{subsec}{\crunchyrollUrl{Crunchyroll}}{01.2017 – 08.2017}
-        \> \vrvAppUrl{VRV} and \crunchyrollAppUrl{Crunchyroll} Android apps development. \\
-        \> Tech stack: Java/Kotlin, Retrofit2+OkHttp3, Chromecast, \\
-        \> MVP, Fabric, Exoplayer, Firebase, Branch.io, \\
-        \> Outbound.io, JUnit4, Mockito1. \\
+        \> \vrvAppUrl{VRV} and \crunchyrollAppUrl{Crunchyroll} Android apps development. \lineend
+        \> Tech stack: Java/Kotlin, Retrofit2+OkHttp3, \\
+        \> Chromecast, MVP, Fabric, Exoplayer, Firebase, \\
+        \> Branch.io, Outbound.io, JUnit4, Mockito1. \\
     \end{subsec}
     
+    \vspace{24pt}
+    
     \begin{subsec}{\yopesoUrl{Yopeso}}{08.2016 – 01.2017}
-        \> \limangoAppUrl{limango} Android app development. \\
+        \> \limangoAppUrl{limango} Android app development. \lineend
         \> Tech stack: Java, Retrofit+OkHttp3, Firebase, RxJava, \\
         \> MVP, JUnit4+Mockito2, Dagger2, SQLite. \\
     \end{subsec}
     
+    \vspace{24pt}
+    
     \begin{subsec}{\travodUrl{Travod}}{10.2015 – 08.2016}
-        \> Technical support, DTP and project management. \\
+        \> Technical support, DTP and project management. \lineend
         \> Tech stack: Photoshop, InDesign, SDL Trados. \\
     \end{subsec}
-     
+
+    \vspace{24pt}
+    
     \begin{subsec}{\aursoftUrl{Aursoft}}{02.2015 – 12.2015}
-        \> MyBebe Android app development. \\
+        \> MyBebe Android app development. \lineend
         \> Tech stack: Java, Support Library, Volley, Picasso, SQLite. \\
     \end{subsec}
     
+    \vspace{24pt}
+    
     \sectionTitle{Education}{icon_school}
+    
+    \vspace{24pt}
     
     \begin{subsec}{\muniUrl{Masaryk University}}{2017 – 2019}
         \> MSc, \muniFiUrl{Faculty of Informatics} \\
         \> \muniSsmeFiUrl{Service Science, Management and Engineering} \\
     \end{subsec}
+    
+    \vspace{24pt}
     
     \begin{subsec}{\usmUrl{State University of Moldova}}{2014 – 2017}
         \> BSc, \fmiUsmUrl{Mathematics and Computer Science} \\

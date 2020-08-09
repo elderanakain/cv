@@ -26,31 +26,31 @@
     \\[12pt]
 }
 
+\newcommand{\lineend}{
+    \\[4pt]
+}
+
 % Section
 
 \newcommand{\sectionTitle}[2]{
-    \bigskip 
     \raisebox{-.1\height}{
         \includesvg[height=20pt]{#2}
     }
-    \headlineSix{\textbf{#1}} 
-    \bigskip
+    \headlineSix{\textbf{#1}}
 }
 
 \newcommand{\subsectionTitle}[2]{
-    \bigskip
-    \subtitleOne{#1} \hfill \subtitleTwo{#2} 
-    \bigskip
+    \subtitleOne{#1} \hfill #2
 }
 
 \newenvironment{sectionBody}{
-    \vspace{-20pt}
+    \vspace{-16pt}
     \begin{tabbing}
     \hspace{5mm} \= \\
 }
 { 
     \end{tabbing}
-    \vspace{-20pt}
+    \vspace{-25pt}
 }
 
 \newenvironment{subsec}[2]{
