@@ -23,7 +23,7 @@
 % Table
 
 \newcommand{\rowend}{
-    \\[8pt]
+    \\[12pt]
 }
 
 % Section
@@ -52,4 +52,11 @@
     \end{tabbing}
     \vspace{-20pt}
 }
-    
+
+\newenvironment{subsec}[2]{
+    \subsectionTitle{#1}{#2}
+    \begin{sectionBody}
+}
+{
+    \end{sectionBody}
+}
