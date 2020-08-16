@@ -20,6 +20,7 @@
 \graphicspath{ {images/} }
 \usepackage{svg}
 \usepackage{float}
+\usepackage{tikz}
 
 % Table
 \usepackage{array}
@@ -45,10 +46,13 @@
 \begin{document}
 \begin{minipage}[t]{0.35\textwidth}
     \begin{figure}[H]
-        \vspace*{-18pt}
-        \includegraphics[width=\textwidth]{profile}
+        \vspace*{-20pt}
+        \begin{tikzpicture}
+            \clip (0,22pt) circle (92pt); 
+            \path (0,0) node{\includegraphics[width=\textwidth]{profile}};
+        \end{tikzpicture}
     \end{figure}
-    
+   
     \begin{center}
         \headlineSix{\textbf{Arcadii Rubailo}}
         
