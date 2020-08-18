@@ -1,5 +1,4 @@
 \documentclass[12pt, a4paper]{article}
-
 \input{design}
 \input{const}
 
@@ -12,8 +11,12 @@
 \usepackage[sfdefault]{roboto}
 
 % Page (showframe)
-\usepackage[a4paper, total={6in, 8in}, margin=1cm]{geometry}
+\usepackage[a4paper, total={6in, 8in}, lmargin=0.4cm, rmargin=1cm, tmargin=1cm, bmargin=1cm]{geometry}
 \pagenumbering{gobble}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primary}{RGB}{156, 204, 101}
+\definecolor{light}{RGB}{207, 255, 149}
+\definecolor{dark}{RGB}{107, 155, 55}
 
 % Image
 \usepackage{graphicx}
@@ -44,11 +47,21 @@
 
 % Content
 \begin{document}
+
+\begin{tikzpicture}[overlay,remember picture]
+    \fill[light, opacity=0.2] (0.31\paperwidth,-\paperheight) rectangle (\paperwidth,\paperheight);
+\end{tikzpicture}
+\begin{tikzpicture}[overlay,remember picture]
+    \fill[primary, opacity=1] (current page.south west) rectangle (0.345\paperwidth,\paperheight);
+\end{tikzpicture}
+\begin{tikzpicture}[overlay,remember picture]
+    \node[inner sep=0pt] at (5pt,-0.8\paperheight) {\includegraphics[width=0.5\textwidth]{logo_jetpack}};
+\end{tikzpicture}
 \begin{minipage}[t]{0.35\textwidth}
     \begin{figure}[H]
         \vspace*{-20pt}
         \begin{tikzpicture}
-            \clip (0,22pt) circle (92pt); 
+            \clip (0,22pt) circle (90pt); 
             \path (0,0) node{\includegraphics[width=\textwidth]{profile}};
         \end{tikzpicture}
     \end{figure}
@@ -74,11 +87,6 @@
                                     &   Romanian - B1                                                           \\  
                                     &   Czech - A1                                                              \rowend
     \end{tabular}
-    
-    \begin{figure}[H]
-        \vspace*{160pt}
-        \includegraphics[width=\textwidth]{android_logo}
-    \end{figure}
 \end{minipage}
 \hspace{15pt}
 \begin{minipage}[t]{0.6\textwidth}
@@ -119,6 +127,7 @@
         \> Tech stack: Java, Volley, Picasso, SQLite. \\
     \end{subsec}
     
+    \vspace{24pt}
     \vspace{24pt}
     
     \sectionTitle{Education}{icon_school}
