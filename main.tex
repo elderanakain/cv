@@ -16,9 +16,9 @@
 \usepackage[dvipsnames]{xcolor}
 \definecolor{primary}{RGB}{156, 204, 101}
 \definecolor{light}{RGB}{207, 255, 149}
-\definecolor{dark}{RGB}{107, 155, 55}
 
 % Image
+
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage{svg}
@@ -42,8 +42,8 @@
 % Global settings
 \setlength{\intextsep}{0pt}
 \setlength{\parindent}{0pt}
-
 \setlength{\tabcolsep}{2pt}
+\newcommand{\midSectionSpace}{16pt}
 
 % Content
 \begin{document}
@@ -55,9 +55,9 @@
     \fill[primary, opacity=1] (current page.south west) rectangle (0.345\paperwidth,\paperheight);
 \end{tikzpicture}
 \begin{tikzpicture}[overlay,remember picture]
-    \node[inner sep=0pt] at (5pt,-0.8\paperheight) {\includegraphics[width=0.5\textwidth]{logo_jetpack}};
+    \node[inner sep=0pt] at (5pt,-0.75\paperheight) {\includegraphics[width=0.5\textwidth]{logo_jetpack}};
 \end{tikzpicture}
-\begin{minipage}[t]{0.35\textwidth}
+\begin{minipage}[t][\paperheight][t]{0.35\textwidth}
     \begin{figure}[H]
         \vspace*{-20pt}
         \begin{tikzpicture}
@@ -87,9 +87,13 @@
                                     &   Romanian - B1                                                           \\  
                                     &   Czech - A1                                                              \rowend
     \end{tabular}
+    
+    \vspace{270pt}
+    
+    \repoUrl{written in LaTeX}
 \end{minipage}
 \hspace{15pt}
-\begin{minipage}[t]{0.6\textwidth}
+\begin{minipage}[t][\paperheight][t]{0.6\textwidth}
     \sectionTitle{Experience}{icon_work}
     
     \vspace{24pt}
@@ -104,7 +108,7 @@
         \>  RxJava2, LiveData, Databinding, Jetpack, ARCore, Moshi.  \\
     \end{subsec}
     
-    \vspace{24pt}
+    \vspace{\midSectionSpace}
     
     \begin{subsec}{\crunchyrollUrl{Crunchyroll}}{01.2017 – 08.2017}
         \>  \vrvAppUrl{VRV} and \crunchyrollAppUrl{Crunchyroll} Android applications development.   \lineend
@@ -112,22 +116,28 @@
         \>  Butterknife, Chromecast, Exoplayer.                                                     \\
     \end{subsec}
     
-    \vspace{24pt}
+    \vspace{\midSectionSpace}
     
     \begin{subsec}{\yopesoUrl{Yopeso}}{08.2016 – 01.2017}
         \>  \limangoAppUrl{limango} Android application development.    \lineend
-        \>  \tabListItem{Release management.}                           \lineend
         \>  Tech stack: Java, MVP, Dagger2, RxJava, SQLite.             \\
     \end{subsec}
 
-    \vspace{24pt}
+    \vspace{\midSectionSpace}
+    
+    \begin{subsec}{\travodUrl{Travod}}{10.2015 – 08.2016}
+        \>  Translation and localisation services.  \\
+        \>  \tabListItem{Project management;}       \\
+        \>  \tabListItem{Technical support.}        \\
+    \end{subsec}
+
+    \vspace{\midSectionSpace}
     
     \begin{subsec}{\aursoftUrl{Aursoft}}{02.2015 – 12.2015}
         \> MyBebe Android application development. \lineend
         \> Tech stack: Java, Volley, Picasso, SQLite. \\
     \end{subsec}
     
-    \vspace{24pt}
     \vspace{24pt}
     
     \sectionTitle{Education}{icon_school}
@@ -138,7 +148,7 @@
         \> \androidCertificationUrl{Google Associate Android Developer Certification} \\
     \end{subsec}
     
-    \vspace{24pt}
+    \vspace{\midSectionSpace}
     
     \begin{subsec}{\muniUrl{Masaryk University}}{2017 – 2019}
         \> Master of Science, \muniFiUrl{Faculty of Informatics} \\
@@ -146,7 +156,7 @@
         \> \muniThesis{Thesis} \\
     \end{subsec}
     
-    \vspace{24pt}
+    \vspace{\midSectionSpace}
     
     \begin{subsec}{\usmUrl{State University of Moldova}}{2014 – 2017}
         \> Bachelor of Science, \fmiUsmUrl{Mathematics and Computer Science} \\

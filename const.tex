@@ -1,4 +1,6 @@
-\newcommand{\urlOut}[2]{\href{#1}{\underline{\smash{#2}}}}
+\newcommand{\urlOut}[2]{\href{#1}{\underline{\smash{#2}}\begin{tikzpicture}[auto]
+    \node[inner sep=0pt]{\includesvg[height=12pt]{icon_link}};
+\end{tikzpicture}}}
 
 \newcommand{\kiwiAppUrl}[1]{\urlOut{https://play.google.com/store/apps/details?id=com.skypicker.main}{#1}}
 \newcommand{\kiwiUrl}[1]{\urlOut{https://www.kiwi.com}{#1}}
@@ -7,8 +9,8 @@
 \newcommand{\crunchyrollAppUrl}[1]{\urlOut{https://play.google.com/store/apps/details?id=com.crunchyroll.crunchyroid}{#1}}
 \newcommand{\yopesoUrl}[1]{\urlOut{https://yopeso.com}{#1}}
 \newcommand{\limangoAppUrl}[1]{\urlOut{https://play.google.com/store/apps/details?id=de.limango.shop}{#1}}
-\newcommand{\travodUrl}[1]{\urlOut{https://travod.com}{#1}}
 \newcommand{\aursoftUrl}[1]{\urlOut{https://aursoft.md}{#1}}
+\newcommand{\travodUrl}[1]{\urlOut{https://travod.com}{#1}}
 
 \newcommand{\muniUrl}[1]{\urlOut{https://muni.cz/en}{#1}}
 \newcommand{\muniFiUrl}[1]{\urlOut{https://www.fi.muni.cz}{#1}}
@@ -22,3 +24,4 @@
 
 \newcommand{\linkedinUrl}[1]{\urlOut{https://www.linkedin.com/in/arcadii-rubailo}{#1}}
 \newcommand{\githubUrl}[1]{\urlOut{https://github.com/elderanakain}{#1}}
+\newcommand{\repoUrl}[1]{\urlOut{https://github.com/elderanakain/cv}{#1}}
