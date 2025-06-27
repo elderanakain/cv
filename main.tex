@@ -14,8 +14,9 @@
 \usepackage[a4paper, total={6in, 8in}, lmargin=0.4cm, rmargin=1cm, tmargin=1cm, bmargin=1cm]{geometry}
 \pagenumbering{gobble}
 \usepackage[dvipsnames]{xcolor}
-\definecolor{primary}{RGB}{156, 204, 101}
-\definecolor{light}{RGB}{207, 255, 149}
+% Android Green Theme - Classic Android branding  
+\definecolor{primary}{RGB}{61, 183, 76}       % Android Green
+\definecolor{light}{RGB}{232, 252, 235}       % Light Green Background
 
 % Image
 
@@ -51,14 +52,18 @@
     \fill[primary, opacity=1] (current page.south west) rectangle (0.345\paperwidth,\paperheight);
 \end{tikzpicture}
 \begin{tikzpicture}[overlay,remember picture]
-    \node[inner sep=0pt] at (5pt,-0.75\paperheight) {\includegraphics[width=0.5\textwidth]{logo_jetpack}};
+    \node[inner sep=0pt] at (135pt,-0.77\paperheight) {\includegraphics[width=0.35\textwidth]{icon_kodee}};
+    \node[inner sep=0pt] at (0pt,-0.75\paperheight) {\includegraphics[width=0.35\textwidth]{logo_jetpack}};
 \end{tikzpicture}
-\begin{minipage}[t]{0.35\textwidth}
+\begin{minipage}[t]{0.33\textwidth}
     \begin{figure}[H]
         \vspace*{-20pt}
         \begin{tikzpicture}
-            \clip (0,0) circle (90pt); 
+            % Clip and insert profile image
+            \clip (0,0) circle (88pt);
             \path (0,0) node{\includegraphics[width=\textwidth]{profile}};
+            % Draw thin border on top
+            \draw[primary, line width=1.5pt] (0,0) circle (88pt);
         \end{tikzpicture}
     \end{figure}
    
