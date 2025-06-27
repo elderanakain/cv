@@ -1,0 +1,61 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "LaTeX: Build PDF",
+            "command": "/Library/TeX/texbin/latexmk",
+            "args": [
+                "-shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "main.tex"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "PATH": "/Library/TeX/texbin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+                }
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "LaTeX: Clean",
+            "command": "/Library/TeX/texbin/latexmk",
+            "args": [
+                "-C"
+            ],
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "PATH": "/Library/TeX/texbin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+                }
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        }
+    ]
+}
